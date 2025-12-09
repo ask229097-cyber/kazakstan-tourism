@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мәдениет пен дәм — Қазақстан</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #0a1f3c;
+      color: #f2f2f2;
+    }
+
+    header {
+      height: 200px; 
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      background-size: cover; 
+      background-position: center;
+      transition: background-image 1.5s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #132a4c;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      color: #ffd700;
+      margin-bottom: 8px;
+    }
+
+    .info {
+      font-size: 14px;
+      color: #9bb5d4;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #ffb347;
+    }
+
+    .desc {
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      color: #e3e8ef;
+    }
+
+    .review {
+      font-style: italic;
+      background: rgba(255,255,255,0.08);
+      padding: 10px;
+      border-radius: 10px;
+      color: #b8c4da;
+    }
+
+    #reviews {
+      max-width: 1000px;
+      margin: 60px auto;
+      background: #132a4c;
+      border-radius: 16px;
+      padding: 40px;
+      color: #f1f1f1;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    #reviews h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ffd700;
+    }
+
+    .review-item {
+      background: rgba(255,255,255,0.08);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .review-item strong {
+      font-size: 18px;
+      color: #ffd700;
+    }
+
+    .stars {
+      color: #ffd700;
+      font-size: 20px;
+    }
+
+    footer {
+      text-align: center;
+      background: #09172d;
+      color: #b0c4de;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header">
+    <h1>Мәдениет пен дәм</h1>
+    <p>Қазақстанның ерекше дәмі мен дәстүрі тоғысқан орындар</p>
+  </header>
+
+  <script>
+    const photos = [
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600",
+      "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1600",
+      "https://images.unsplash.com/photo-1500048993959-dcfe1f1c0d0a?w=1600",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600",
+      "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1600",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600",
+      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600",
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1600"
+    ];
+
+    let i = 0, header = document.getElementById("header");
+    setInterval(() => header.style.backgroundImage = 
+      `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45)), url('${photos[i++ % photos.length]}')`,
+      4000);
+  </script>
+
+  <div class="container">
+
+    <!-- Бұрынғы карточкалар -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80">
+      <div class="card-content">
+        <h2>Daididao</h2>
+        <p class="info">📍 Алматы, Достық даңғылы</p>
+        <p class="price">Баға: 10 000–20 000 тг</p>
+        <p class="desc">Қазақ және азиялық асхананы біріктірген заманауи ресторан.</p>
+        <p class="review">“Тамақ дәмді, атмосферасы жайлы.” — Айгерім</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://imageproxy.wolt.com/assets/6732085936f1e239ba1e590d">
+      <div class="card-content">
+        <h2>Тары</h2>
+        <p class="info">📍 Астана, Хан Шатыр маңы</p>
+        <p class="price">10 000–18 000 тг</p>
+        <p class="desc">Ұлттық тағамдарды заманауи форматта ұсынады.</p>
+        <p class="review">“Нағыз қазақ дәмі!” — Руслан</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://avatars.mds.yandex.net/i?id=fb9d609644ac034c9ac729095bef671192fdea3a-9854613-images-thumbs&n=13">
+      <div class="card-content">
+        <h2>Басқұр</h2>
+        <p class="info">📍 Medeu бағыты</p>
+        <p class="price">9 000–16 000 тг</p>
+        <p class="desc">Киіз үй стиліндегі этно-ресторан.</p>
+        <p class="review">“Қазақ рухы сезіледі!” — Меруерт</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+      <div class="card-content">
+        <h2>Juzz Чайхана</h2>
+        <p class="info">📍 Астана</p>
+        <p class="price">7 000–12 000 тг</p>
+        <p class="desc">Жылы атмосфера, заманауи стиль.</p>
+        <p class="review">“Интерьері өте стильді!” — Диана</p>
+      </div>
+    </div>
+
+    <!-- Жаңа карточкалар -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvHKEYXfCr0khJm1x1_4q__NfHs2SbPUIHvQ&s" alt="Шопан" />
+      <div class="card-content">
+        <h2>Шопан (Аюсай)</h2>
+        <p class="info">📍 Аюсай шатқалы, Алматы маңы</p>
+        <p class="price">Баға: 8 000–15 000 тг</p>
+        <p class="desc">Табиғат аясындағы этно-ресторан. Қазақтың ұлттық тағамдары — ет, қымыз, бауырсақ.</p>
+        <p class="review">“Тау ауасы, қазақ дастарханы, шопанның шәйі — бәрі мінсіз!” — Жандос</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ozpMCDYDxD8I3ylDaBLgijcpdYS3mUE2pw&s" alt="Раббат" />
+      <div class="card-content">
+        <h2>Раббат</h2>
+        <p class="info">📍 Алматы, Төле би көшесі</p>
+        <p class="price">Баға: 12 000–20 000 тг</p>
+        <p class="desc">Шығыс және қазақ асханасы. Әдемі шамдар, жайлы музыка және жылы атмосфера.</p>
+        <p class="review">“Интерьері керемет, шәйі ерекше!” — Айша</p>
+      </div>
+    </div>
+
+  </div>
+
+  <section id="reviews">
+    <h2>Пайдаланушылар пікірлері</h2>
+    <div class="review-item"><strong>Айдана</strong> ★★★★★<p>Өте пайдалы сайт!</p></div>
+    <div class="review-item"><strong>Мирас</strong> ★★★★★<p>Дәмі де, дизайны да керемет.</p></div>
+    <div class="review-item"><strong>Аружан</strong> ★★★★★<p>Этно атмосфера супер.</p></div>
+  </section>
+
+  <footer>© 2025 Kazakhstan Discovery</footer>
+
+</body>
+</html>
